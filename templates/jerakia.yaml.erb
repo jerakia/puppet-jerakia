@@ -1,0 +1,16 @@
+# Managed by puppet: crayfishx/jerakia
+#
+
+---
+policydir: <%= scope['::jerakia::policy_dir'] %>
+plugindir: <%= scope['::jerakia::plugin_dir'] %>
+logfile: <%= scope['::jerakia::logfile'] %>
+loglevel: <%= scope['::jerakia::log_level'] %>
+
+<% unless scope['::jerakia::public_key'].empty? or scope['::jerakia::private_key'].empty? -%>
+eyaml:
+  private_key: <%= scope['::jerakia::private_key'] %>
+  public_key: <%= scope['::jerakia::public_key'] %>
+<% end -%>
+
+

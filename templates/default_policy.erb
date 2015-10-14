@@ -1,0 +1,14 @@
+policy :<%= @name %> do
+
+  lookup :default do
+    datasource :file, {
+      :format     => :<%= @params['format'] %>,
+      :docroot    => "<%= @params['docroot'] %>",
+      :searchpath => [
+<% @params['searchpath'].each do |path| -%>
+        "<%= path %>",
+<% end -%>
+      ],
+    }
+  end
+end

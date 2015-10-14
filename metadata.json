@@ -1,0 +1,14 @@
+{
+  "name": "crayfishx-jerakia",
+  "version": "0.1.0",
+  "author": "crayfishx",
+  "summary": "Puppet module to set up Jerakia",
+  "license": "Apache 2.0",
+  "source": "https://github.com/crayfishx/puppet-jerakia",
+  "project_page": "https://github.com/crayfishx/puppet-jerakia",
+  "issues_url": "https://github.com/crayfishx/puppet-jerakia/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
