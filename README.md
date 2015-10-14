@@ -43,24 +43,24 @@ After running puppet, populate some data and look up from the command line
 
 The `jerakia` class supports the following optional parameters
 
-`package_name` : name of the package to install (default: jerakia)
-`package_provider`: provider to use (default: gem)
-`package_version`: package version (default: latest)
-`install_package`: If set to false, don't manage the package (default: true)
-`config_dir`: Location of the configuration directory
-`config_replace`: If set to false, will not overwrite the config after creation
-`policy_dir`: Location of the policy directory
-`manage_config_dir`: Create/manage the config dir (default: true)
-`manage_plugin_dir`: Create/manage the plugin dir (default: true)
-`manage_policy_dir`: Create/manage the policy dir (default: true)
-`manage_log_dir`: Create/manage the parent directory of the logfile path (default: true)
-`plugin_dir`: Location of the plugins
-`logfile`: Path to the logfile
-`log_level`: Loglevel (default: info)
-`logfile_owner`: Logfile owner (default: puppet)
-`logfile_group`: Logfile group (default: puppet)
-`private_key`: If using eyaml, the path to the private key (default: empty)
-`public_key` If using eyaml, the path to the public key (default: empty)
+* `package_name` : name of the package to install (default: jerakia)
+* `package_provider`: provider to use (default: gem)
+* `package_version`: package version (default: latest)
+* `install_package`: If set to false, don't manage the package (default: true)
+* `config_dir`: Location of the configuration directory
+* `config_replace`: If set to false, will not overwrite the config after creation
+* `policy_dir`: Location of the policy directory
+* `manage_config_dir`: Create/manage the config dir (default: true)
+* `manage_plugin_dir`: Create/manage the plugin dir (default: true)
+* `manage_policy_dir`: Create/manage the policy dir (default: true)
+* `manage_log_dir`: Create/manage the parent directory of the logfile path (default: true)
+* `plugin_dir`: Location of the plugins
+* `logfile`: Path to the logfile
+* `log_level`: Loglevel (default: info)
+* `logfile_owner`: Logfile owner (default: puppet)
+* `logfile_group`: Logfile group (default: puppet)
+* `private_key`: If using eyaml, the path to the private key (default: empty)
+* `public_key` If using eyaml, the path to the public key (default: empty)
 
     
 ## Define type: jerakia::policy
@@ -86,10 +86,10 @@ The contents of the `params` hash is arbitry and entirely dependant on what your
 
 The `jerakia::policy` type supports the following parameters
 
-`policy_dir`: The location of policy files, defaults to the value defined in `jerakia::policy_dir`
-`params`: A hash of parameters to be consumed by the policy template
-`template`: The template to use (default:  jerakia/default_policy.erb)
-`replace`: If set to false then Puppet will not overwrite the policy file after creation (default: true)
+* `policy_dir`: The location of policy files, defaults to the value defined in `jerakia::policy_dir`
+* `params`: A hash of parameters to be consumed by the policy template
+* `template`: The template to use (default:  jerakia/default_policy.erb)
+* `replace`: If set to false then Puppet will not overwrite the policy file after creation (default: true)
 
 
 
