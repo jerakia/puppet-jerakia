@@ -5,6 +5,8 @@
 
 This is a puppet module to manage [Jerakia](https://github.com/crayfishx/jerakia), a data lookup tool.
 
+Jerakia can be used as a hiera backend, or plugged directly into Puppet as a data_binding terminus.
+
 Jerakia is a pluggable hierarchical data lookup engine.  It is not a database, Jerakia itself does not store any data but rather gives a single point of access to your data via a variety of back end data sources.   Jerakia is inspired by Hiera, and can be used a drop in replacement. Hiera itself is a good tool, however it suffers from some degree of limitation in its architecture that makes solving complex edge cases a challenge. Jerakia is an attempt at a different way of approaching data lookup management.  Jerakia started out as a prototype experiment to replace hiera in order to solve a number of complicated requirements for a particular project, over time it matured a bit and we decided to open source it and move it towards a standalone data lookup system.
 
 For more information on Jerakia, visit:
