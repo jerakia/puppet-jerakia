@@ -1,6 +1,6 @@
 {
   "name": "crayfishx-jerakia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "crayfishx",
   "summary": "Puppet module to set up Jerakia",
   "license": "Apache 2.0",
