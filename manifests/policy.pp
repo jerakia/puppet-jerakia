@@ -17,11 +17,7 @@ define jerakia::policy (
 ) {
 
   file { "${::jerakia::policy_dir}/${name}.rb":
-    ensure => file,
+    ensure  => file,
     content => template($template),
   }
 }
-
-
-   
-  
