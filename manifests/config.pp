@@ -7,7 +7,12 @@ class jerakia::config {
   }
 
   if $::jerakia::manage_plugin_dir {
-    file { $::jerakia::plugin_dir:
+    file { [ 
+      $::jerakia::plugin_dir,
+      "${::jerakia::plugin_dir}/jerakia",
+      "${::jerakia::plugin_dir}/jerakia/lookup",
+      "${::jerakia::plugin_dir}/jerakia/lookup/plugin",
+    ]: 
       ensure => directory,
     }
   }
