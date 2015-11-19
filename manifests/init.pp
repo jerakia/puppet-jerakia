@@ -59,6 +59,6 @@ class jerakia (
   class { '::jerakia::package': } ->
   class { '::jerakia::config': }
 
-  contain '::jerakia::package'
-  contain '::jerakia::config'
+  contain 'jerakia::package'
+  contain 'jerakia::config'
 }
