@@ -18,6 +18,7 @@ define jerakia::policy (
 
   file { "${::jerakia::policy_dir}/${name}.rb":
     ensure  => file,
+    replace => $replace,
     content => template($template),
   }
 }
