@@ -1,3 +1,6 @@
+# 0.2.0
+
+* Added schema and plugin options to jerakia.yaml
 
 # 0.1.2
 
