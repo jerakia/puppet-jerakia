@@ -23,6 +23,7 @@ schema:
 <% scope['::jerakia::schema_opts'].each do |key, val| -%>
   <%= key %>: <%= val %>
 <% end -%>
+<% end -%>
 
 
 
@@ -31,10 +32,10 @@ schema:
 plugins:
 <% scope['::jerakia::plugin_opts'].each do |plugin, opts| -%>
   <%= plugin %>:
-  <% opts.each do |key, val| -%>
+<% opts.each do |key, val| -%>
     <%= key %>: <%= val %>
-  <% end -%>
 <% end -%>
-
+<% end -%>
+<% end -%>
 
 
