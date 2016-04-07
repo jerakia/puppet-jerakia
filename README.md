@@ -63,6 +63,35 @@ The `jerakia` class supports the following optional parameters
 * `logfile_group`: Logfile group (default: puppet)
 * `private_key`: If using eyaml, the path to the private key (default: empty)
 * `public_key` If using eyaml, the path to the public key (default: empty)
+* `enable_schemas`: Enable or disable schemas by setting true or false
+* `schema_opts`: A hash containing schema override options
+* `plugin_opts`: A hash of options to be passed to plugins
+
+### Examples:
+
+
+```puppet
+class { 'jerakia': }
+```
+
+```puppet
+class { 'jerakia':
+  schema_opts => {
+    "docroot" => "/var/lib/jerakia/data/_schema",
+  }
+}
+```
+
+```puppet
+class { 'jerakia':
+  plugin_opts => {
+    "my_plugin" => {
+      "param" => "value",
+    },
+  }
+}
+```
+
 
     
 ## Define type: jerakia::policy
