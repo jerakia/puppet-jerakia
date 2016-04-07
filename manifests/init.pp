@@ -49,11 +49,14 @@ class jerakia (
   $manage_log_dir    = $::jerakia::params::manage_log_dir,
   $plugin_dir        = $::jerakia::params::plugin_dir,
   $logfile           = $::jerakia::params::logfile,
-  $log_level          = $::jerakia::params::log_level,
+  $log_level         = $::jerakia::params::log_level,
   $logfile_owner     = $::jerakia::params::logfile_owner,
   $logfile_group     = $::jerakia::params::logfile_group,
   $private_key       = $::jerakia::params::private_key,
   $public_key        = $::jerakia::params::public_key,
+  $enable_schemas    = undef,
+  $schema_opts       = {},
+  $plugin_opts       = {},
   ) inherits jerakia::params {
 
   class { '::jerakia::package': } ->

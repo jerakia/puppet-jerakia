@@ -13,4 +13,28 @@ eyaml:
   public_key: <%= scope['::jerakia::public_key'] %>
 <% end -%>
 
+<% if scope['::jerakia::enable_schemas'] -%>
+enable_schema: <%= scope['::jerakia::enable_schemas'] %>
+<% end -%>
+
+<% unless scope['::jerakia::schema_opts'].empty? -%>
+# Schema options
+schema:
+<% scope['::jerakia::schema_opts'].each do |key, val| -%>
+  <%= key %>: <%= val %>
+<% end -%>
+
+
+
+<% unless scope['::jerakia::plugin_opts'].empty? -%>
+# Plugin options
+plugins:
+<% scope['::jerakia::plugin_opts'].each do |plugin, opts| -%>
+  <%= plugin %>:
+  <% opts.each do |key, val| -%>
+    <%= key %>: <%= val %>
+  <% end -%>
+<% end -%>
+
+
 
