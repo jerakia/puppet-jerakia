@@ -28,6 +28,7 @@ class jerakia::params  {
 
   $logfile_owner = 'puppet'
   $logfile_group = 'puppet'
+  $logfile_mode  = '0644'
 
 
 

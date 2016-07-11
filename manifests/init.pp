@@ -52,6 +52,7 @@ class jerakia (
   $log_level         = $::jerakia::params::log_level,
   $logfile_owner     = $::jerakia::params::logfile_owner,
   $logfile_group     = $::jerakia::params::logfile_group,
+  $logfile_mode      = $::jerakia::params::logfile_mode,
   $private_key       = $::jerakia::params::private_key,
   $public_key        = $::jerakia::params::public_key,
   $enable_schemas    = undef,
