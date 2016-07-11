@@ -1,3 +1,7 @@
+# 0.2.1
+
+* Added logfile_mode parameter
+
 # 0.2.0
 
 * Added schema and plugin options to jerakia.yaml
