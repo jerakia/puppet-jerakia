@@ -61,6 +61,7 @@ The `jerakia` class supports the following optional parameters
 * `log_level`: Loglevel (default: info)
 * `logfile_owner`: Logfile owner (default: puppet)
 * `logfile_group`: Logfile group (default: puppet)
+* `logfile_mode`: Logfile mode (default: 0644)
 * `private_key`: If using eyaml, the path to the private key (default: empty)
 * `public_key` If using eyaml, the path to the public key (default: empty)
 * `enable_schemas`: Enable or disable schemas by setting true or false

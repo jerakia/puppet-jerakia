@@ -34,6 +34,7 @@ class jerakia::config {
     ensure => file,
     owner  => $::jerakia::logfile_owner,
     group  => $::jerakia::logfile_group,
+    mode   => $::jerakia::logfile_mode,
   }
 
   file { "${::jerakia::config_dir}/jerakia.yaml":
