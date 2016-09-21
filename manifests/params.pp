@@ -1,4 +1,4 @@
-
+# Default parameters for Jerakia module
 class jerakia::params  {
 
   $package_name     = 'jerakia'
