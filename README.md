@@ -3,7 +3,7 @@
 
 ## Introduction 
 
-This is a puppet module to manage [Jerakia](https://github.com/crayfishx/jerakia), a data lookup tool.
+This is a puppet module to manage [Jerakia](http://jerakia.io), a data lookup tool.
 
 Jerakia can be used as a hiera backend, or plugged directly into Puppet as a data_binding terminus.
 
@@ -11,7 +11,7 @@ Jerakia is a pluggable hierarchical data lookup engine.  It is not a database, J
 
 For more information on Jerakia, visit:
 
-* [The official github page](https://github.com/crayfishx/jerakia)
+* [The official website - jerakia.io](http://jerakia.io)
 * [Blog post part 1: Solving real world problems with Jerakia](http://www.craigdunn.org/2015/09/solving-real-world-problems-with-jerakia/)
 * [Blog post part 2: Extending Jerakia with lookup plugins](http://www.craigdunn.org/2015/09/extending-jerakia-with-lookup-plugins/)
 
