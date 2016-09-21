@@ -1,3 +1,4 @@
+# Private Class for configuring Jerakia
 class jerakia::config {
 
   if $::jerakia::manage_config_dir {
@@ -7,12 +8,12 @@ class jerakia::config {
   }
 
   if $::jerakia::manage_plugin_dir {
-    file { [ 
+    file { [
       $::jerakia::plugin_dir,
       "${::jerakia::plugin_dir}/jerakia",
       "${::jerakia::plugin_dir}/jerakia/lookup",
       "${::jerakia::plugin_dir}/jerakia/lookup/plugin",
-    ]: 
+    ]:
       ensure => directory,
     }
   }

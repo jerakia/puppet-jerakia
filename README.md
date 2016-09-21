@@ -45,8 +45,10 @@ After running puppet, populate some data and look up from the command line
 
 The `jerakia` class supports the following optional parameters
 
+* `package_install_options` : array of install options for package (default: undef)
 * `package_name` : name of the package to install (default: jerakia)
 * `package_provider`: provider to use (default: gem)
+* `package_uninstall_options` : array of uninstall options for package (default: undef)
 * `package_version`: package version (default: latest)
 * `install_package`: If set to false, don't manage the package (default: true)
 * `config_dir`: Location of the configuration directory
