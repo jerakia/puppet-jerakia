@@ -125,5 +125,27 @@ The `jerakia::policy` type supports the following parameters
 * `template`: The template to use (default:  jerakia/default_policy.erb)
 * `replace`: If set to false then Puppet will not overwrite the policy file after creation (default: true)
 
+## Hiera 5 data provider
+
+This module also provides the Hiera 5 data provider for integrating Puppet 4.9+ (Hiera 5) with Jerakia Server
+
+The data provider should be configured as a lookup_key type level in your Hiera hierarchy using the `jerakia` function, eg:
+
+```yaml
+---
+
+version: 5
+
+hierarchy:
+  - name: Jerakia
+    lookup_key: jerakia
+    options:
+      token: puppet:63d0626015b5993e6e6c35da06c2548a6c631f5634f3d7056cdd074156a8183d5eff04f825dc447b
+      scope:
+        environment: "%{environment}"
+        role: "%{facts.role}"
+```
+
+Please see [Integration with Puppet](http://jerakia.io/integration/puppet) from the official documentation for more details on using the Hiera 5 backend
 
 
