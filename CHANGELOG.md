@@ -1,3 +1,8 @@
+## 1.1.0
+
+* Added the Hiera 5 data provider function [See docs](http://jerakia.io/integration/puppet)
+
+
 # 1.0.0
 
 * Added `package_install_options` and `package_uninstall_options` attributes
