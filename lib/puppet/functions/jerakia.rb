@@ -22,12 +22,13 @@ Puppet::Functions.create_function(:jerakia) do
 
     jerakia_options = {} 
 
-    options.reject { |k| [ "scope", "policy" ].include?(k) }.each { |k, v|
+    options.reject { |k| [ "scope", "policy", "interpolate" ].include?(k) }.each { |k, v|
       jerakia_options[k.to_sym] = v
     }
 
     scope = options["scope"] || {}
     policy = options["policy"] || :default
+    interpolate = options["interpolate"] || true
 
     jerakia = Jerakia::Client.new(jerakia_options)
 
@@ -47,7 +48,13 @@ Puppet::Functions.create_function(:jerakia) do
 
     if result.is_a?(Hash)
       raise Puppet::DataBinding::LookupError.new("Jerakia data lookup failed", result['message']) unless result['status'] = 'ok'
-      return result['payload']
+      if result['payload'].nil?
+        context.not_found
+      else
+        payload = result['payload']
+        return context.interpolate(payload) if interpolate
+        return payload
+      end
     else
       raise Puppet::DataBinding::LookupError.new("Jerakia data lookup failed", "Expected a hash but got a #{result.class}")
     end
