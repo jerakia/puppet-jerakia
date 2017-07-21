@@ -29,9 +29,7 @@ Puppet::Functions.create_function(:jerakia) do
     scope = options["scope"] || {}
     policy = options["policy"] || :default
 
-    interpolate = options["interpolate"]
-
-    interpolate = true if interpolate.nil?
+    interpolate = options["interpolate"].nil? ? true : options["interpolate"]
 
     jerakia = Jerakia::Client.new(jerakia_options)
 
