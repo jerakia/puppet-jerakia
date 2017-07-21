@@ -1,3 +1,9 @@
+
+
+### 1.2.1
+
+* Bugfix: `interpolate: false` in `hiera.yaml` had no effect due the way the `interpolate` option was evaluated, meaning hiera-side interpolation could not be disabled.  https://github.com/crayfishx/puppet-jerakia/pull/5
+
 ## 1.2.0
 
 * Bugfix: Backend now returns `context.not_found` instead of `nil` when a lookup returns no data.
