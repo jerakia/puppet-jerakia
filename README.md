@@ -97,7 +97,7 @@ class { 'jerakia':
 
 
     
-## Define type: jerakia::policy
+### Defined Type, jerakia::policy
 
 Jerakia policies are written in Ruby DSL and reside under the `$policy_dir` directory.  The module provides a helper defined type for managing policies.  The contents of the policy file can be sourced from any Puppet module by providing the `template` parameter.  All data in the `params` parameter will be passed to the template.  An example quick start default policy is provided and can be enabled using:
 
